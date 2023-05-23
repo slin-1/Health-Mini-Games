@@ -34,6 +34,7 @@ public class SpacialAwarenessLevel implements ActionListener {
 		this.panel = new JPanel();
 		this.buttons = new JButton[dimensions][dimensions];
 		this.coloured = new boolean[dimensions][dimensions];
+		this.frame.setLocationRelativeTo(null);
 		
 		selectColoured();	
 		createGUI();
@@ -44,6 +45,7 @@ public class SpacialAwarenessLevel implements ActionListener {
 		
 		//reveals the JFrame containing the level
  		this.frame.setVisible(true);
+		this.frame.setLocationRelativeTo(null);
 		//gives the player 1000 milliseconds to see the coloured-in elements before timer task is run, hiding them
 		new Timer().schedule(task, 1000);
 	}
@@ -55,7 +57,7 @@ public class SpacialAwarenessLevel implements ActionListener {
  		this.frame.setSize(516,539);
 
  		this.panel.setLayout(null);
- 		this.frame.add(this.panel);	
+ 		this.frame.add(this.panel);
 		
 		for(byte i = 0; i < this.buttons.length; i++) {
 			for(byte j = 0; j < this.buttons.length; j++) {

@@ -24,6 +24,7 @@ public class SpacialAwarenessPlay implements ActionListener {
 		welcomeFrame = new JFrame();
 		welcomeFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		welcomeFrame.setSize(526,400);
+		welcomeFrame.setLocationRelativeTo(null); //centers the GUI on the screen when starting
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
@@ -58,8 +59,7 @@ public class SpacialAwarenessPlay implements ActionListener {
 		panel.add(button);
 		
 		button.addActionListener(new SpacialAwarenessPlay());
-		welcomeFrame.setVisible(true);
-				
+		welcomeFrame.setVisible(true);	
 	}
 	
 	//play method starts the game
